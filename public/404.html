@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Błąd strony</title>
+
+    <!-- WAŻNE: przekierowanie do SPA -->
+    <script>
+      // Przekierowanie na hash, żeby React Router mógł obsłużyć trasę
+      var pathname = window.location.pathname;
+      window.location.replace(
+        window.location.origin + "/#/" + pathname.replace(/^\/+/, "")
+      );
+    </script>
+  </head>
+  <body>
+    <noscript>Wystąpił błąd strony.</noscript>
+  </body>
+</html>
+

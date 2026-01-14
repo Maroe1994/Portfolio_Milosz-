@@ -1,7 +1,11 @@
-import React from "react";
+
 import { Global,Contact,Textcontainerfirst,Iconphoto,Textcontainersecond,Textcontainerthird,Textcontainerfour,Firstcontainercontent,Firstcontainerinside,Miloszimage,Firstparagraph,Secondparagraph,Thirdparagraph,Fourparagraph,Firstacapit, Containerphototext,Containertxt,Containeryeyes,Lastbigcontainer,Fotter,Firstelementfotter,Secondelementfotter,Thirdelementfotter,Leftcontainer,Miloszsmile,Textwithunderline, Containerwithcontact,Writeonemail,Localization,Containersocialmedia,InstagramandBe } from "../stylecomponents/landingpage.style";
 import { Slider } from "./Slider";
 import { Link } from 'react-scroll';
+
+
+
+
 
 export function Landingpage () {
 
@@ -16,10 +20,12 @@ const imagesArrays =  [{ src: process.env.PUBLIC_URL+"/milosz.jpg",id:1},
 {src:process.env.PUBLIC_URL+"/logo512.png", id:4}
 ];
 
+ 
 
-    return (
+    return ( 
         <>
         <Global/> 
+        
         <Contact><Link to="Fotter" smooth={true} duration={500}>kontakt</Link></Contact>
         <Textcontainerfirst>Cześć!
          <Iconphoto src={process.env.PUBLIC_URL+"/iconphoto.png"} alt="Iconphoto" />   
@@ -27,7 +33,7 @@ const imagesArrays =  [{ src: process.env.PUBLIC_URL+"/milosz.jpg",id:1},
         <Textcontainersecond>Jestem</Textcontainersecond>
         <Textcontainerthird>Miłosz</Textcontainerthird>
         <Textcontainerfour>Chełmowski</Textcontainerfour>
-
+           
         <Firstcontainercontent>
          <Firstcontainerinside>
          <Firstparagraph>
@@ -181,6 +187,7 @@ const imagesArrays =  [{ src: process.env.PUBLIC_URL+"/milosz.jpg",id:1},
         2023
        </Thirdelementfotter>
        </Fotter>
+       
        
         </>
         

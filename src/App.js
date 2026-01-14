@@ -1,14 +1,33 @@
 
 import './App.css';
-import {BrowserRouter,Routes,Route} from "react-router-dom";
+import {HashRouter,Routes,Route} from "react-router-dom";
 import { Landingpage } from './components/Landingpage';
+import NotFound from "./components/NotFound";
+import { AutoHashRedirect } from './components/Autohashdirect';
+
+
+
 function App() {
+ 
+
+
+
   return (
-    <BrowserRouter basename='Portfolio_Milosz'>
-    <Routes>
-    <Route path="/" element={<Landingpage/>}/>
+    
+    <HashRouter>
+     <AutoHashRedirect/>
+     <Routes>   
+    {/* POPRAWNA STRONA */}
+        <Route path="/Portfolio_Milosz" element={<Landingpage />} />
+
+        {/* ROOT = BŁĄD */}
+        <Route path="/" element={<NotFound />} />
+
+        {/* KAŻDY INNY ZŁY ADRES = BŁĄD */}
+        <Route path="*" element={<NotFound />} /> 
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
+    
   )
 }
   
